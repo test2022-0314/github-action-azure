@@ -36,3 +36,6 @@ jobs:
       
       - name: list resource groups
         run: az group list --output table
+        
+      - name: get secret from KeyVault
+        run: az keyvault secret show --vault-name handsonkv9837423 --name StorageAccountConnectionString --query value --output tsv
